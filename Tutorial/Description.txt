@@ -1,0 +1,72 @@
+/***********************************************************************************************************************
+* DISCLAIMER
+* This software is supplied by Renesas Electronics Corporation and is only 
+* intended for use with Renesas products. No other uses are authorized. This 
+* software is owned by Renesas Electronics Corporation and is protected under 
+* all applicable laws, including copyright laws.
+* THIS SOFTWARE IS PROVIDED "AS IS" AND RENESAS MAKES NO WARRANTIES REGARDING 
+* THIS SOFTWARE, WHETHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT 
+* LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE 
+* AND NON-INFRINGEMENT.  ALL SUCH WARRANTIES ARE EXPRESSLY DISCLAIMED.
+* TO THE MAXIMUM EXTENT PERMITTED NOT PROHIBITED BY LAW, NEITHER RENESAS 
+* ELECTRONICS CORPORATION NOR ANY OF ITS AFFILIATED COMPANIES SHALL BE LIABLE 
+* FOR ANY DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES FOR 
+* ANY REASON RELATED TO THIS SOFTWARE, EVEN IF RENESAS OR ITS AFFILIATES HAVE 
+* BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+* Renesas reserves the right, without notice, to make changes to this software 
+* and to discontinue the availability of this software.  By using this software, 
+* you agree to the additional terms and conditions found by accessing the 
+* following link:
+* http://www.renesas.com/disclaimer
+*
+* Copyright (C) 2014 Renesas Electronics Corporation. All rights reserved.
+***********************************************************************************************************************/
+
+/***********************************************************************************************************************
+* Project      : RSKRX64M_Tutorial
+* File Name    : Description.txt
+* Version      : Code Generator for RX64M V1.00.01.01 [09 May 2014]
+* Device(s)    : R5F564MLCxFC
+* Tool-Chain   : CCRX
+* H/W Platform : RSKRX64M
+* Description  : Tutorial sample, use in conjunction with the Code Generator Tutorial Manual
+*                (r20ut2983eg0100_rsk+rx64m_codegentutorialmanual.pdf) and Tutorial Manual 
+*                (r20ut2594eg0100_rsk+rx64m_tutorialmanual). 
+* Note         : Code Generator is used to generate code for this sample program. 
+*                The Code Generator details and version number are given in the file 
+*                header for each relevant module.
+* Modifications: Ensure that J16 pins 2-3 are connected and J18 pins 2-3 are connected with jumpers.
+*
+* Operation    : Power the RSK from a +5V centre positive PSU via the PWR connector.
+*
+* Instructions : 
+*             1. Connect the RSK G1CUSB0 port to a PC using a USB Type A to mini B cable.
+*                The first time this port is connected to the PC an 'Installing Device Driver Software'
+*                pop-up will appear and the driver will be automatically installed. In Device Manager, the virtual
+*                COM port will appear under 'Port (COM & LPT)' as 'RSK USB Serial Port (COMx)', 
+*                where x is a number.
+*                
+*             2. Open a terminal program (e.g HyperTerminal) on the virtual COMx port created in step 1. 
+*                Ensure the terminal program connection settings are as follows:
+*                
+*                Baud Rate.............19200
+*                Data Bits.................8
+*                Parity.................None
+*                Stop Bits.................1
+*                Flow Control...........None
+*
+*             3. Compile and download the sample code. Click the 'Resume' button to start program execution.
+*                Click 'Resume' again if the program stops at main().
+*                The LCD display will show 'RSK+RX64M Tutorial 
+*                Press Any Switch' on the first 3 lines of the LCD.
+*                
+*             4. Press any switch or the character 'C' in the terminal window. An A/D conversion will be performed. 
+*                The result will be displayed in the centre of the LCD.  The result and count will also be 
+*                displayed in the terminal program. 
+*                
+*             5. Adjust the potentiometer RV1 and repeat step 4.
+*
+***********************************************************************************************************************/
+/***********************************************************************************************************************
+* History      : 18/01/2014 Ver. 1.00 First Release
+***********************************************************************************************************************/

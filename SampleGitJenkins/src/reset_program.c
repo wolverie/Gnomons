@@ -50,14 +50,14 @@ void main(void);
 }
 #endif
 
-//#ifdef __cplusplus				// Use SIM I/O
-//extern "C" {
-//#endif
-//extern void _INIT_IOLIB(void);
-//extern void _CLOSEALL(void);
-//#ifdef __cplusplus
-//}
-//#endif
+#ifdef __cplusplus				// Use SIM I/O
+extern "C" {
+#endif
+extern void _INIT_IOLIB(void);
+extern void _CLOSEALL(void);
+#ifdef __cplusplus
+}
+#endif
 
 #define PSW_init  0x00010000	// PSW bit pattern
 #define FPSW_init 0x00000000	// FPSW bit base pattern
