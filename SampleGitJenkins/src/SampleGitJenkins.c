@@ -18,21 +18,21 @@ int main(void)
     CU_ErrorAction error_action = CUEA_IGNORE;
     //Initializes the framework test registry
     if (CU_initialize_registry()) {
-    printf("\nInitialization of Test Registry failed.");
+        printf("\nInitialization of Test Registry failed.");
     }
     else {
-    //call add test function
-    AddTests();
-    //Sets the basic run mode, which controls the output during test runs
-    CU_basic_set_mode(mode);
-    //Sets the error action
-    CU_set_error_action(error_action);
-    //Runs all tests in all registered suites
-    printf("\nTests completed with return value %d.\n",
-    CU_basic_run_tests());
-    //Call this function to clean up
-    //and release memory used by the framework
-    CU_cleanup_registry();
+        //call add test function
+        AddTests();
+        //Sets the basic run mode, which controls the output during test runs
+        CU_basic_set_mode(mode);
+        //Sets the error action
+        CU_set_error_action(error_action);
+        //Runs all tests in all registered suites
+        printf("\nTests completed with return value %d.\n",
+        CU_basic_run_tests());
+        //Call this function to clean up
+        //and release memory used by the framework
+        CU_cleanup_registry();
     }
     return 0;
 }
