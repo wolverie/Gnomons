@@ -19,8 +19,7 @@ int main(void)
     //Initializes the framework test registry
     if (CU_initialize_registry()) {
         printf("\nInitialization of Test Registry failed.");
-    }
-    else {
+    } else {
         //call add test function
         AddTests();
         //Sets the basic run mode, which controls the output during test runs
