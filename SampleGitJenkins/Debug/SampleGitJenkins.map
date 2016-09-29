@@ -1,0 +1,1479 @@
+Renesas Optimizing Linker (W2.05.00 )             29-Sep-2016 11:58:23
+
+*** Options ***
+
+-subcommand=LinkerSubCommand.tmp
+-input="./src/lowlvl.obj"
+-input="./src/Basic.obj"
+-input="./src/SampleGitJenkins.obj"
+-input="./src/dbsct.obj"
+-input="./src/interrupt_handlers.obj"
+-input="./src/lowsrc.obj"
+-input="./src/reset_program.obj"
+-input="./src/sbrk.obj"
+-input="./src/source.obj"
+-input="./src/testsource.obj"
+-input="./src/vector_table.obj"
+-input="./src/Framework/CUError.obj"
+-input="./src/Framework/MyMem.obj"
+-input="./src/Framework/TestDB.obj"
+-input="./src/Framework/TestRun.obj"
+-input="./src/Framework/Util.obj"
+-start=SU,SI,B_1,R_1,B_2,R_2,B,R/04,PResetPRG,C_1,C_2,C,C$*,D*,W*,L,PIntPRG,P/0FFC00000,EXCEPTVECT/0FFFFFF80,RESETVECT/0FFFFFFFC
+-library=C:\WORKSP~1\Gnomons\SAMPLE~1\Debug\SampleGitJenkins.lib
+-noprelink
+-list=SampleGitJenkins.map
+-show
+-nooptimize
+-debug
+-output=C:\workspace\Gnomons\SampleGitJenkins\Debug\SampleGitJenkins.abs
+-rom=D=R,D_1=R_1,D_2=R_2
+-nocompress
+-nomessage
+-nologo
+
+*** Error information ***
+
+*** Mapping List ***
+
+SECTION                            START      END         SIZE   ALIGN
+
+SU
+                                  00000004  00000103       100   4
+SI
+                                  00000104  00000403       300   4
+B_1
+                                  00000404  0000042c        29   1
+R_1
+                                  0000042d  0000047d        51   1
+B_2
+                                  0000047e  0000047e         0   1
+R_2
+                                  0000047e  0000047e         0   1
+B
+                                  00000480  00000cdb       85c   4
+R
+                                  00000cdc  00001107       42c   4
+$ADDR_C_120040
+                                  00120040  00120043         4   1
+$ADDR_C_120048
+                                  00120048  0012004b         4   1
+$ADDR_C_120050
+                                  00120050  0012006f        20   1
+PResetPRG
+                                  ffc00000  ffc00039        3a   1
+C_1
+                                  ffc0003a  ffc0010b        d2   1
+C_2
+                                  ffc0010c  ffc0050f       404   2
+C
+                                  ffc00510  ffc005eb        dc   4
+C$DSEC
+                                  ffc005ec  ffc0060f        24   4
+C$BSEC
+                                  ffc00610  ffc00627        18   4
+C$INIT
+                                  ffc00628  ffc00628         0   1
+C$VECT
+                                  ffc00628  ffc00a27       400   4
+C$VTBL
+                                  ffc00a28  ffc00a28         0   1
+D
+                                  ffc00a28  ffc00e53       42c   4
+D_1
+                                  ffc00e54  ffc00ea4        51   1
+D_2
+                                  ffc00ea5  ffc00ea5         0   1
+W
+                                  ffc00ea5  ffc00ea5         0   1
+W_1
+                                  ffc00ea5  ffc00ea5         0   1
+W_2
+                                  ffc00ea5  ffc00ea5         0   1
+L
+                                  ffc00ea8  ffc01c88       de1   4
+PIntPRG
+                                  ffc01c89  ffc01e52       1ca   1
+P
+                                  ffc01e53  ffc0725c      540a   1
+EXCEPTVECT
+                                  ffffff80  fffffffb        7c   4
+RESETVECT
+                                  fffffffc  ffffffff         4   4
+
+*** Symbol List ***
+
+SECTION=
+FILE=                               START        END    SIZE
+  SYMBOL                            ADDR        SIZE    INFO      COUNTS  OPT
+
+SECTION=SU
+FILE=.\src\reset_program.obj
+                                  00000004  00000103       100
+
+SECTION=SI
+FILE=.\src\reset_program.obj
+                                  00000104  00000403       300
+
+SECTION=B_1
+FILE=.\src\lowlvl.obj
+                                  00000404  00000404         1
+  IO_BUF
+                                  00000404         0   none ,l         3
+FILE=.\src\lowsrc.obj
+                                  00000405  0000042c        28
+  _flmod
+                                  00000405        14   data ,g         3
+  _sml_buf
+                                  00000419        14   data ,g         0
+
+SECTION=R_1
+FILE=xfiles
+                                  0000042d  0000047c        50
+  _ebuf
+                                  0000042d        50   data ,l         5
+FILE=xstate
+                                  0000047d  0000047d         1
+  __Mbcurmax
+                                  0000047d         1   data ,g         1
+
+SECTION=B
+FILE=.\src\lowlvl.obj
+                                  00000480  00000483         4
+  PARM
+                                  00000480         0   none ,l         2
+FILE=.\src\lowsrc.obj
+                                  00000484  000004d3        50
+  __Files
+                                  00000484        50   data ,g         5
+FILE=.\src\sbrk.obj
+                                  000004d4  00000cd3       800
+  _heap_area
+                                  000004d4       800   data ,l         2
+FILE=.\src\Framework\TestRun.obj
+                                  00000cd4  00000cd7         4
+  _f_start_time
+                                  00000cd4         4   data ,l         4
+FILE=_errno
+                                  00000cd8  00000cdb         4
+  __errno
+                                  00000cd8         4   data ,g         3
+
+SECTION=R
+FILE=.\src\Basic.obj
+                                  00000cdc  00000ce3         8
+  _f_pRunningSuite
+                                  00000cdc         4   data ,l         4
+  _f_run_mode
+                                  00000ce0         4   data ,l         8
+FILE=.\src\lowsrc.obj
+                                  00000ce4  00000cf7        14
+  _env_list
+                                  00000ce4        10   data ,g         1
+  _environ
+                                  00000cf4         4   data ,g         0
+FILE=.\src\sbrk.obj
+                                  00000cf8  00000cfb         4
+  _brk
+                                  00000cf8         4   data ,l         1
+FILE=.\src\testsource.obj
+                                  00000cfc  00000d6b        70
+  _tests_Add
+                                  00000cfc        18   data ,l         1
+  _tests_Subtract
+                                  00000d14        10   data ,l         1
+  _suites
+                                  00000d24        48   data ,l         1
+FILE=.\src\Framework\CUError.obj
+                                  00000d6c  00000e27        bc
+  _g_error_number
+                                  00000d6c         4   data ,l         3
+  _g_error_action
+                                  00000d70         4   data ,l         3
+  _ErrorDescription$1
+                                  00000d74        b4   data ,l         1
+FILE=.\src\Framework\TestDB.obj
+                                  00000e28  00000e2b         4
+  _f_pTestRegistry
+                                  00000e28         4   data ,l        10
+FILE=.\src\Framework\TestRun.obj
+                                  00000e2c  00000ebb        90
+  _f_bTestIsRunning
+                                  00000e2c         4   data ,l         5
+  _f_pCurSuite
+                                  00000e30         4   data ,l         7
+  _f_pCurTest
+                                  00000e34         4   data ,l         5
+  _f_run_summary
+                                  00000e38        5c   data ,l        6e
+  _f_failure_list
+                                  00000e94         4   data ,l         c
+  _f_last_failure
+                                  00000e98         4   data ,l         4
+  _f_failure_on_inactive
+                                  00000e9c         4   data ,l         6
+  _f_pSuiteStartMessageHandler
+                                  00000ea0         4   data ,l         4
+  _f_pTestStartMessageHandler
+                                  00000ea4         4   data ,l         3
+  _f_pTestCompleteMessageHandler
+                                  00000ea8         4   data ,l         3
+  _f_pSuiteCompleteMessageHandler
+                                  00000eac         4   data ,l         4
+  _f_pAllTestsCompleteMessageHandler
+                                  00000eb0         4   data ,l         5
+  _f_pSuiteInitFailureMessageHandler
+                                  00000eb4         4   data ,l         4
+  _f_pSuiteCleanupFailureMessageHandler
+                                  00000eb8         4   data ,l         4
+FILE=xtouptab
+                                  00000ebc  00000ec3         8
+  __Touptab
+                                  00000ebc         4   data ,g         2
+  __Tls_setup__Touptab
+                                  00000ec0         4   data ,g         1
+FILE=xfiles
+                                  00000ec4  00000f9b        d8
+  __Stdin
+                                  00000ec4        48   data ,g         8
+  __Stdout
+                                  00000f0c        48   data ,g        10
+  __Stderr
+                                  00000f54        48   data ,g        2b
+FILE=xctype
+                                  00000f9c  00000fa3         8
+  __Ctype
+                                  00000f9c         4   data ,g         4
+  __Tls_setup__Ctype
+                                  00000fa0         4   data ,g         1
+FILE=malloc
+                                  00000fa4  00000fab         8
+  __Aldata
+                                  00000fa4         8   data ,g         3
+FILE=xprintf
+                                  00000fac  00000faf         4
+  _stderr
+                                  00000fac         4   data ,g         0
+FILE=xstate
+                                  00000fb0  00000ff7        48
+  __Tls_setup__Mbcurmax
+                                  00000fb0         4   data ,g         1
+  __Mbstate
+                                  00000fb4        40   data ,g         2
+  __Tls_setup__Mbstate
+                                  00000ff4         4   data ,g         2
+FILE=localeco
+                                  00000ff8  0000104b        54
+  __Locale
+                                  00000ff8        50   data ,g         1
+  __Tls_setup__Locale
+                                  00001048         4   data ,g         0
+FILE=xwcstate
+                                  0000104c  0000108f        44
+  __Wcstate
+                                  0000104c        40   data ,g         2
+  __Tls_setup__Wcstate
+                                  0000108c         4   data ,g         2
+FILE=xfvalues
+                                  00001090  00001107        78
+  __FDenorm
+                                  00001090        10   data ,g         0
+  __FEps
+                                  000010a0        10   data ,g         0
+  __FHugeval
+                                  000010b0        10   data ,g         0
+  __FInf
+                                  000010c0        10   data ,g         1
+  __FNan
+                                  000010d0        10   data ,g         0
+  __FSnan
+                                  000010e0        10   data ,g         0
+  __FRteps
+                                  000010f0        10   data ,g         0
+  __FXbig
+                                  00001100         4   data ,g         0
+  __FZero
+                                  00001104         4   data ,g         0
+
+SECTION=$ADDR_C_120040
+FILE=.\src\vector_table.obj
+                                  00120040  00120043         4
+  ___SPCCreg
+                                  00120040         4   data ,g         0
+
+SECTION=$ADDR_C_120048
+FILE=.\src\vector_table.obj
+                                  00120048  0012004b         4
+  ___TMEFreg
+                                  00120048         4   data ,g         0
+
+SECTION=$ADDR_C_120050
+FILE=.\src\vector_table.obj
+                                  00120050  0012006f        20
+  ___OSISreg
+                                  00120050        10   data ,g         0
+  ___TMINFreg
+                                  00120060         4   data ,g         0
+  ___MDEreg
+                                  00120064         4   data ,g         0
+  ___OFS0reg
+                                  00120068         4   data ,g         0
+  ___OFS1reg
+                                  0012006c         4   data ,g         0
+
+SECTION=PResetPRG
+FILE=.\src\reset_program.obj
+                                  ffc00000  ffc00039        3a
+  _PowerON_Reset_PC
+                                  ffc00000        3a   entry,g         1
+
+SECTION=C_1
+FILE=xprintf
+                                  ffc0003a  ffc00043         a
+  _fchar$1
+                                  ffc0003a         a   data ,l         1
+FILE=xputtxt
+                                  ffc00044  ffc000e8        a5
+  _spaces
+                                  ffc00044        21   data ,l         1
+  _zeroes
+                                  ffc00065        21   data ,l         1
+  _asterisk
+                                  ffc00086        21   data ,l         1
+  _plus
+                                  ffc000a7        21   data ,l         1
+  _minus
+                                  ffc000c8        21   data ,l         1
+FILE=xlitob
+                                  ffc000e9  ffc0010a        22
+  _ldigs
+                                  ffc000e9        11   data ,l         1
+  _udigs
+                                  ffc000fa        11   data ,l         1
+FILE=localeco
+                                  ffc0010b  ffc0010b         1
+  _null
+                                  ffc0010b         1   data ,l         d
+
+SECTION=C_2
+FILE=xtouptab
+                                  ffc0010c  ffc0030d       202
+  _toup_tab
+                                  ffc0010c       202   data ,l         1
+FILE=xctype
+                                  ffc0030e  ffc0050f       202
+  _ctyp_tab
+                                  ffc0030e       202   data ,l         1
+
+SECTION=C
+FILE=.\src\dbsct.obj
+                                  ffc00510  ffc00543        34
+  __CTBL
+                                  ffc00510        34   data ,g         0
+FILE=.\src\Framework\Util.obj
+                                  ffc00544  ffc0055b        18
+  _CU_bindings
+                                  ffc00544        18   data ,l         3
+FILE=_nfiles
+                                  ffc0055c  ffc0055f         4
+  __nfiles
+                                  ffc0055c         4   data ,g         4
+FILE=xfoprep
+                                  ffc00560  ffc005a7        48
+  _init$1
+                                  ffc00560        48   data ,l         1
+FILE=xprintf
+                                  ffc005a8  ffc005bf        18
+  _fbit$2
+                                  ffc005a8        18   data ,l         1
+FILE=_sbrk_si
+                                  ffc005c0  ffc005c3         4
+  __sbrk_size
+                                  ffc005c0         4   data ,g         1
+FILE=xfopen
+                                  ffc005c4  ffc005d3        10
+  _rwacc$1
+                                  ffc005c4        10   data ,l         1
+FILE=xldtob
+                                  ffc005d4  ffc005eb        18
+  _pows
+                                  ffc005d4        18   data ,l         1
+
+SECTION=C$DSEC
+FILE=.\src\dbsct.obj
+                                  ffc005ec  ffc0060f        24
+  __DTBL
+                                  ffc005ec        24   data ,g         0
+
+SECTION=C$BSEC
+FILE=.\src\dbsct.obj
+                                  ffc00610  ffc00627        18
+  __BTBL
+                                  ffc00610        18   data ,g         0
+
+SECTION=C$VECT
+FILE=.\src\dbsct.obj
+                                  ffc00628  ffc00a27       400
+
+SECTION=D
+FILE=.\src\Basic.obj
+                                  ffc00a28  ffc00a2f         8
+FILE=.\src\lowsrc.obj
+                                  ffc00a30  ffc00a43        14
+FILE=.\src\sbrk.obj
+                                  ffc00a44  ffc00a47         4
+FILE=.\src\testsource.obj
+                                  ffc00a48  ffc00ab7        70
+FILE=.\src\Framework\CUError.obj
+                                  ffc00ab8  ffc00b73        bc
+FILE=.\src\Framework\TestDB.obj
+                                  ffc00b74  ffc00b77         4
+FILE=.\src\Framework\TestRun.obj
+                                  ffc00b78  ffc00c07        90
+FILE=xtouptab
+                                  ffc00c08  ffc00c0f         8
+FILE=xfiles
+                                  ffc00c10  ffc00ce7        d8
+FILE=xctype
+                                  ffc00ce8  ffc00cef         8
+FILE=malloc
+                                  ffc00cf0  ffc00cf7         8
+FILE=xprintf
+                                  ffc00cf8  ffc00cfb         4
+FILE=xstate
+                                  ffc00cfc  ffc00d43        48
+FILE=localeco
+                                  ffc00d44  ffc00d97        54
+FILE=xwcstate
+                                  ffc00d98  ffc00ddb        44
+FILE=xfvalues
+                                  ffc00ddc  ffc00e53        78
+
+SECTION=D_1
+FILE=xfiles
+                                  ffc00e54  ffc00ea3        50
+FILE=xstate
+                                  ffc00ea4  ffc00ea4         1
+
+SECTION=L
+FILE=.\src\Basic.obj
+                                  ffc00ea8  ffc01114       26d
+FILE=.\src\SampleGitJenkins.obj
+                                  ffc01118  ffc01168        51
+FILE=.\src\lowsrc.obj
+                                  ffc0116c  ffc011ad        42
+FILE=.\src\testsource.obj
+                                  ffc011b0  ffc01312       163
+FILE=.\src\Framework\CUError.obj
+                                  ffc01314  ffc0155e       24b
+FILE=.\src\Framework\TestDB.obj
+                                  ffc01560  ffc01813       2b4
+FILE=.\src\Framework\TestRun.obj
+                                  ffc01814  ffc01b83       370
+FILE=.\src\Framework\Util.obj
+                                  ffc01b84  ffc01c48        c5
+FILE=xprintf
+                                  ffc01c4c  ffc01c52         7
+FILE=xldtob
+                                  ffc01c54  ffc01c75        22
+FILE=xgenld
+                                  ffc01c78  ffc01c79         2
+FILE=localeco
+                                  ffc01c7c  ffc01c88         d
+
+SECTION=PIntPRG
+FILE=.\src\interrupt_handlers.obj
+                                  ffc01c89  ffc01e52       1ca
+  _Excep_SuperVisorInst
+                                  ffc01c89         2   func ,g         1
+  _Excep_AccessInst
+                                  ffc01c8b         2   func ,g         1
+  _Excep_UndefinedInst
+                                  ffc01c8d         2   func ,g         1
+  _Excep_FloatingPoint
+                                  ffc01c8f         2   func ,g         1
+  _NonMaskableInterrupt
+                                  ffc01c91         2   func ,g         1
+  _Dummy
+                                  ffc01c93         2   func ,g        1a
+  _Excep_BRK
+                                  ffc01c95         4   func ,g         0
+  _Excep_BSC_BUSERR
+                                  ffc01c99         2   func ,g         0
+  _Excep_RAM_RAMERR
+                                  ffc01c9b         2   func ,g         0
+  _Excep_FCU_FIFERR
+                                  ffc01c9d         2   func ,g         0
+  _Excep_FCU_FRDYI
+                                  ffc01c9f         2   func ,g         0
+  _Excep_ICU_SWINT2
+                                  ffc01ca1         2   func ,g         0
+  _Excep_ICU_SWINT
+                                  ffc01ca3         2   func ,g         0
+  _Excep_CMT0_CMI0
+                                  ffc01ca5         2   func ,g         0
+  _Excep_CMT1_CMI1
+                                  ffc01ca7         2   func ,g         0
+  _Excep_CMTW0_CMWI0
+                                  ffc01ca9         2   func ,g         0
+  _Excep_CMTW1_CMWI1
+                                  ffc01cab         2   func ,g         0
+  _Excep_USBA_D0FIFO2
+                                  ffc01cad         2   func ,g         0
+  _Excep_USBA_D1FIFO2
+                                  ffc01caf         2   func ,g         0
+  _Excep_USB0_D0FIFO0
+                                  ffc01cb1         2   func ,g         0
+  _Excep_USB0_D1FIFO0
+                                  ffc01cb3         2   func ,g         0
+  _Excep_RSPI0_SPRI0
+                                  ffc01cb5         2   func ,g         0
+  _Excep_RSPI0_SPTI0
+                                  ffc01cb7         2   func ,g         0
+  _Excep_QSPI_SPRI
+                                  ffc01cb9         2   func ,g         0
+  _Excep_QSPI_SPTI
+                                  ffc01cbb         2   func ,g         0
+  _Excep_SDHI_SBFAI
+                                  ffc01cbd         2   func ,g         0
+  _Excep_MMCIF_MBFAI
+                                  ffc01cbf         2   func ,g         0
+  _Excep_SSI0_SSITXI0
+                                  ffc01cc1         2   func ,g         0
+  _Excep_SSI0_SSIRXI0
+                                  ffc01cc3         2   func ,g         0
+  _Excep_SSI1_SSIRTI1
+                                  ffc01cc5         2   func ,g         0
+  _Excep_SRC_IDEI
+                                  ffc01cc7         2   func ,g         0
+  _Excep_SRC_ODFI
+                                  ffc01cc9         2   func ,g         0
+  _Excep_RIIC0_RXI0
+                                  ffc01ccb         2   func ,g         0
+  _Excep_RIIC0_TXI0
+                                  ffc01ccd         2   func ,g         0
+  _Excep_RIIC2_RXI2
+                                  ffc01ccf         2   func ,g         0
+  _Excep_RIIC2_TXI2
+                                  ffc01cd1         2   func ,g         0
+  _Excep_SCI0_RXI0
+                                  ffc01cd3         2   func ,g         0
+  _Excep_SCI0_TXI0
+                                  ffc01cd5         2   func ,g         0
+  _Excep_SCI1_RXI1
+                                  ffc01cd7         2   func ,g         0
+  _Excep_SCI1_TXI1
+                                  ffc01cd9         2   func ,g         0
+  _Excep_SCI2_RXI2
+                                  ffc01cdb         2   func ,g         0
+  _Excep_SCI2_TXI2
+                                  ffc01cdd         2   func ,g         0
+  _Excep_ICU_IRQ0
+                                  ffc01cdf         2   func ,g         0
+  _Excep_ICU_IRQ1
+                                  ffc01ce1         2   func ,g         0
+  _Excep_ICU_IRQ2
+                                  ffc01ce3         2   func ,g         0
+  _Excep_ICU_IRQ3
+                                  ffc01ce5         2   func ,g         0
+  _Excep_ICU_IRQ4
+                                  ffc01ce7         2   func ,g         0
+  _Excep_ICU_IRQ5
+                                  ffc01ce9         2   func ,g         0
+  _Excep_ICU_IRQ6
+                                  ffc01ceb         2   func ,g         0
+  _Excep_ICU_IRQ7
+                                  ffc01ced         2   func ,g         0
+  _Excep_ICU_IRQ8
+                                  ffc01cef         2   func ,g         0
+  _Excep_ICU_IRQ9
+                                  ffc01cf1         2   func ,g         0
+  _Excep_ICU_IRQ10
+                                  ffc01cf3         2   func ,g         0
+  _Excep_ICU_IRQ11
+                                  ffc01cf5         2   func ,g         0
+  _Excep_ICU_IRQ12
+                                  ffc01cf7         2   func ,g         0
+  _Excep_ICU_IRQ13
+                                  ffc01cf9         2   func ,g         0
+  _Excep_ICU_IRQ14
+                                  ffc01cfb         2   func ,g         0
+  _Excep_ICU_IRQ15
+                                  ffc01cfd         2   func ,g         0
+  _Excep_SCI3_RXI3
+                                  ffc01cff         2   func ,g         0
+  _Excep_SCI3_TXI3
+                                  ffc01d01         2   func ,g         0
+  _Excep_SCI4_RXI4
+                                  ffc01d03         2   func ,g         0
+  _Excep_SCI4_TXI4
+                                  ffc01d05         2   func ,g         0
+  _Excep_SCI5_RXI5
+                                  ffc01d07         2   func ,g         0
+  _Excep_SCI5_TXI5
+                                  ffc01d09         2   func ,g         0
+  _Excep_SCI6_RXI6
+                                  ffc01d0b         2   func ,g         0
+  _Excep_SCI6_TXI6
+                                  ffc01d0d         2   func ,g         0
+  _Excep_LVD1_LVD1
+                                  ffc01d0f         2   func ,g         0
+  _Excep_LVD2_LVD2
+                                  ffc01d11         2   func ,g         0
+  _Excep_USB0_USBR0
+                                  ffc01d13         2   func ,g         0
+  _Excep_RTC_ALM
+                                  ffc01d15         2   func ,g         0
+  _Excep_RTC_PRD
+                                  ffc01d17         2   func ,g         0
+  _Excep_USBA_USBAR
+                                  ffc01d19         2   func ,g         0
+  _Excep_IWDT_IWUNI
+                                  ffc01d1b         2   func ,g         0
+  _Excep_WDT_WUNI
+                                  ffc01d1d         2   func ,g         0
+  _Excep_PDC_PCDFI
+                                  ffc01d1f         2   func ,g         0
+  _Excep_SCI7_RXI7
+                                  ffc01d21         2   func ,g         0
+  _Excep_SCI7_TXI7
+                                  ffc01d23         2   func ,g         0
+  _Excep_SCIFA8_RXIF8
+                                  ffc01d25         2   func ,g         0
+  _Excep_SCIFA8_TXIF8
+                                  ffc01d27         2   func ,g         0
+  _Excep_SCIFA9_RXIF9
+                                  ffc01d29         2   func ,g         0
+  _Excep_SCIFA9_TXIF9
+                                  ffc01d2b         2   func ,g         0
+  _Excep_SCIFA10_RXIF10
+                                  ffc01d2d         2   func ,g         0
+  _Excep_SCIFA10_TXIF10
+                                  ffc01d2f         2   func ,g         0
+  _Excep_ICU_GROUPBE0
+                                  ffc01d31         2   func ,g         0
+  _Excep_ICU_GROUPBL0
+                                  ffc01d33         2   func ,g         0
+  _Excep_ICU_GROUPBL1
+                                  ffc01d35         2   func ,g         0
+  _Excep_ICU_GROUPAL0
+                                  ffc01d37         2   func ,g         0
+  _Excep_ICU_GROUPAL1
+                                  ffc01d39         2   func ,g         0
+  _Excep_SCIFA11_RXIF11
+                                  ffc01d3b         2   func ,g         0
+  _Excep_SCIFA11_TXIF11
+                                  ffc01d3d         2   func ,g         0
+  _Excep_SCI12_RXI12
+                                  ffc01d3f         2   func ,g         0
+  _Excep_SCI12_TXI12
+                                  ffc01d41         2   func ,g         0
+  _Excep_DMAC_DMAC0I
+                                  ffc01d43         2   func ,g         0
+  _Excep_DMAC_DMAC1I
+                                  ffc01d45         2   func ,g         0
+  _Excep_DMAC_DMAC2I
+                                  ffc01d47         2   func ,g         0
+  _Excep_DMAC_DMAC3I
+                                  ffc01d49         2   func ,g         0
+  _Excep_DMAC_DMAC74I
+                                  ffc01d4b         2   func ,g         0
+  _Excep_OST_OST
+                                  ffc01d4d         2   func ,g         0
+  _Excep_EXDMAC_EXDMAC0I
+                                  ffc01d4f         2   func ,g         0
+  _Excep_EXDMAC_EXDMAC1I
+                                  ffc01d51         2   func ,g         0
+  _Excep_PERIB_INTB128
+                                  ffc01d53         2   func ,g         0
+  _Excep_PERIB_INTB129
+                                  ffc01d55         2   func ,g         0
+  _Excep_PERIB_INTB130
+                                  ffc01d57         2   func ,g         0
+  _Excep_PERIB_INTB131
+                                  ffc01d59         2   func ,g         0
+  _Excep_PERIB_INTB132
+                                  ffc01d5b         2   func ,g         0
+  _Excep_PERIB_INTB133
+                                  ffc01d5d         2   func ,g         0
+  _Excep_PERIB_INTB134
+                                  ffc01d5f         2   func ,g         0
+  _Excep_PERIB_INTB135
+                                  ffc01d61         2   func ,g         0
+  _Excep_PERIB_INTB136
+                                  ffc01d63         2   func ,g         0
+  _Excep_PERIB_INTB137
+                                  ffc01d65         2   func ,g         0
+  _Excep_PERIB_INTB138
+                                  ffc01d67         2   func ,g         0
+  _Excep_PERIB_INTB139
+                                  ffc01d69         2   func ,g         0
+  _Excep_PERIB_INTB140
+                                  ffc01d6b         2   func ,g         0
+  _Excep_PERIB_INTB141
+                                  ffc01d6d         2   func ,g         0
+  _Excep_PERIB_INTB142
+                                  ffc01d6f         2   func ,g         0
+  _Excep_PERIB_INTB143
+                                  ffc01d71         2   func ,g         0
+  _Excep_PERIB_INTB144
+                                  ffc01d73         2   func ,g         0
+  _Excep_PERIB_INTB145
+                                  ffc01d75         2   func ,g         0
+  _Excep_PERIB_INTB146
+                                  ffc01d77         2   func ,g         0
+  _Excep_PERIB_INTB147
+                                  ffc01d79         2   func ,g         0
+  _Excep_PERIB_INTB148
+                                  ffc01d7b         2   func ,g         0
+  _Excep_PERIB_INTB149
+                                  ffc01d7d         2   func ,g         0
+  _Excep_PERIB_INTB150
+                                  ffc01d7f         2   func ,g         0
+  _Excep_PERIB_INTB151
+                                  ffc01d81         2   func ,g         0
+  _Excep_PERIB_INTB152
+                                  ffc01d83         2   func ,g         0
+  _Excep_PERIB_INTB153
+                                  ffc01d85         2   func ,g         0
+  _Excep_PERIB_INTB154
+                                  ffc01d87         2   func ,g         0
+  _Excep_PERIB_INTB155
+                                  ffc01d89         2   func ,g         0
+  _Excep_PERIB_INTB156
+                                  ffc01d8b         2   func ,g         0
+  _Excep_PERIB_INTB157
+                                  ffc01d8d         2   func ,g         0
+  _Excep_PERIB_INTB158
+                                  ffc01d8f         2   func ,g         0
+  _Excep_PERIB_INTB159
+                                  ffc01d91         2   func ,g         0
+  _Excep_PERIB_INTB160
+                                  ffc01d93         2   func ,g         0
+  _Excep_PERIB_INTB161
+                                  ffc01d95         2   func ,g         0
+  _Excep_PERIB_INTB162
+                                  ffc01d97         2   func ,g         0
+  _Excep_PERIB_INTB163
+                                  ffc01d99         2   func ,g         0
+  _Excep_PERIB_INTB164
+                                  ffc01d9b         2   func ,g         0
+  _Excep_PERIB_INTB165
+                                  ffc01d9d         2   func ,g         0
+  _Excep_PERIB_INTB166
+                                  ffc01d9f         2   func ,g         0
+  _Excep_PERIB_INTB167
+                                  ffc01da1         2   func ,g         0
+  _Excep_PERIB_INTB168
+                                  ffc01da3         2   func ,g         0
+  _Excep_PERIB_INTB169
+                                  ffc01da5         2   func ,g         0
+  _Excep_PERIB_INTB170
+                                  ffc01da7         2   func ,g         0
+  _Excep_PERIB_INTB171
+                                  ffc01da9         2   func ,g         0
+  _Excep_PERIB_INTB172
+                                  ffc01dab         2   func ,g         0
+  _Excep_PERIB_INTB173
+                                  ffc01dad         2   func ,g         0
+  _Excep_PERIB_INTB174
+                                  ffc01daf         2   func ,g         0
+  _Excep_PERIB_INTB175
+                                  ffc01db1         2   func ,g         0
+  _Excep_PERIB_INTB176
+                                  ffc01db3         2   func ,g         0
+  _Excep_PERIB_INTB177
+                                  ffc01db5         2   func ,g         0
+  _Excep_PERIB_INTB178
+                                  ffc01db7         2   func ,g         0
+  _Excep_PERIB_INTB179
+                                  ffc01db9         2   func ,g         0
+  _Excep_PERIB_INTB180
+                                  ffc01dbb         2   func ,g         0
+  _Excep_PERIB_INTB181
+                                  ffc01dbd         2   func ,g         0
+  _Excep_PERIB_INTB182
+                                  ffc01dbf         2   func ,g         0
+  _Excep_PERIB_INTB183
+                                  ffc01dc1         2   func ,g         0
+  _Excep_PERIB_INTB184
+                                  ffc01dc3         2   func ,g         0
+  _Excep_PERIB_INTB185
+                                  ffc01dc5         2   func ,g         0
+  _Excep_PERIB_INTB186
+                                  ffc01dc7         2   func ,g         0
+  _Excep_PERIB_INTB187
+                                  ffc01dc9         2   func ,g         0
+  _Excep_PERIB_INTB188
+                                  ffc01dcb         2   func ,g         0
+  _Excep_PERIB_INTB189
+                                  ffc01dcd         2   func ,g         0
+  _Excep_PERIB_INTB190
+                                  ffc01dcf         2   func ,g         0
+  _Excep_PERIB_INTB191
+                                  ffc01dd1         2   func ,g         0
+  _Excep_PERIB_INTB192
+                                  ffc01dd3         2   func ,g         0
+  _Excep_PERIB_INTB193
+                                  ffc01dd5         2   func ,g         0
+  _Excep_PERIB_INTB194
+                                  ffc01dd7         2   func ,g         0
+  _Excep_PERIB_INTB195
+                                  ffc01dd9         2   func ,g         0
+  _Excep_PERIB_INTB196
+                                  ffc01ddb         2   func ,g         0
+  _Excep_PERIB_INTB197
+                                  ffc01ddd         2   func ,g         0
+  _Excep_PERIB_INTB198
+                                  ffc01ddf         2   func ,g         0
+  _Excep_PERIB_INTB199
+                                  ffc01de1         2   func ,g         0
+  _Excep_PERIB_INTB200
+                                  ffc01de3         2   func ,g         0
+  _Excep_PERIB_INTB201
+                                  ffc01de5         2   func ,g         0
+  _Excep_PERIB_INTB202
+                                  ffc01de7         2   func ,g         0
+  _Excep_PERIB_INTB203
+                                  ffc01de9         2   func ,g         0
+  _Excep_PERIB_INTB204
+                                  ffc01deb         2   func ,g         0
+  _Excep_PERIB_INTB205
+                                  ffc01ded         2   func ,g         0
+  _Excep_PERIB_INTB206
+                                  ffc01def         2   func ,g         0
+  _Excep_PERIB_INTB207
+                                  ffc01df1         2   func ,g         0
+  _Excep_PERIA_INTA208
+                                  ffc01df3         2   func ,g         0
+  _Excep_PERIA_INTA209
+                                  ffc01df5         2   func ,g         0
+  _Excep_PERIA_INTA210
+                                  ffc01df7         2   func ,g         0
+  _Excep_PERIA_INTA211
+                                  ffc01df9         2   func ,g         0
+  _Excep_PERIA_INTA212
+                                  ffc01dfb         2   func ,g         0
+  _Excep_PERIA_INTA213
+                                  ffc01dfd         2   func ,g         0
+  _Excep_PERIA_INTA214
+                                  ffc01dff         2   func ,g         0
+  _Excep_PERIA_INTA215
+                                  ffc01e01         2   func ,g         0
+  _Excep_PERIA_INTA216
+                                  ffc01e03         2   func ,g         0
+  _Excep_PERIA_INTA217
+                                  ffc01e05         2   func ,g         0
+  _Excep_PERIA_INTA218
+                                  ffc01e07         2   func ,g         0
+  _Excep_PERIA_INTA219
+                                  ffc01e09         2   func ,g         0
+  _Excep_PERIA_INTA220
+                                  ffc01e0b         2   func ,g         0
+  _Excep_PERIA_INTA221
+                                  ffc01e0d         2   func ,g         0
+  _Excep_PERIA_INTA222
+                                  ffc01e0f         2   func ,g         0
+  _Excep_PERIA_INTA223
+                                  ffc01e11         2   func ,g         0
+  _Excep_PERIA_INTA224
+                                  ffc01e13         2   func ,g         0
+  _Excep_PERIA_INTA225
+                                  ffc01e15         2   func ,g         0
+  _Excep_PERIA_INTA226
+                                  ffc01e17         2   func ,g         0
+  _Excep_PERIA_INTA227
+                                  ffc01e19         2   func ,g         0
+  _Excep_PERIA_INTA228
+                                  ffc01e1b         2   func ,g         0
+  _Excep_PERIA_INTA229
+                                  ffc01e1d         2   func ,g         0
+  _Excep_PERIA_INTA230
+                                  ffc01e1f         2   func ,g         0
+  _Excep_PERIA_INTA231
+                                  ffc01e21         2   func ,g         0
+  _Excep_PERIA_INTA232
+                                  ffc01e23         2   func ,g         0
+  _Excep_PERIA_INTA233
+                                  ffc01e25         2   func ,g         0
+  _Excep_PERIA_INTA234
+                                  ffc01e27         2   func ,g         0
+  _Excep_PERIA_INTA235
+                                  ffc01e29         2   func ,g         0
+  _Excep_PERIA_INTA236
+                                  ffc01e2b         2   func ,g         0
+  _Excep_PERIA_INTA237
+                                  ffc01e2d         2   func ,g         0
+  _Excep_PERIA_INTA238
+                                  ffc01e2f         2   func ,g         0
+  _Excep_PERIA_INTA239
+                                  ffc01e31         2   func ,g         0
+  _Excep_PERIA_INTA240
+                                  ffc01e33         2   func ,g         0
+  _Excep_PERIA_INTA241
+                                  ffc01e35         2   func ,g         0
+  _Excep_PERIA_INTA242
+                                  ffc01e37         2   func ,g         0
+  _Excep_PERIA_INTA243
+                                  ffc01e39         2   func ,g         0
+  _Excep_PERIA_INTA244
+                                  ffc01e3b         2   func ,g         0
+  _Excep_PERIA_INTA245
+                                  ffc01e3d         2   func ,g         0
+  _Excep_PERIA_INTA246
+                                  ffc01e3f         2   func ,g         0
+  _Excep_PERIA_INTA247
+                                  ffc01e41         2   func ,g         0
+  _Excep_PERIA_INTA248
+                                  ffc01e43         2   func ,g         0
+  _Excep_PERIA_INTA249
+                                  ffc01e45         2   func ,g         0
+  _Excep_PERIA_INTA250
+                                  ffc01e47         2   func ,g         0
+  _Excep_PERIA_INTA251
+                                  ffc01e49         2   func ,g         0
+  _Excep_PERIA_INTA252
+                                  ffc01e4b         2   func ,g         0
+  _Excep_PERIA_INTA253
+                                  ffc01e4d         2   func ,g         0
+  _Excep_PERIA_INTA254
+                                  ffc01e4f         2   func ,g         0
+  _Excep_PERIA_INTA255
+                                  ffc01e51         2   func ,g         0
+
+SECTION=P
+FILE=.\src\lowlvl.obj
+                                  ffc01e53  ffc01e92        40
+  _charput
+                                  ffc01e53         0   none ,g         1
+  _charget
+                                  ffc01e70         0   none ,g         1
+FILE=.\src\Basic.obj
+                                  ffc01e93  ffc02405       573
+  _CU_basic_run_tests
+                                  ffc01e93        43   func ,g         1
+  _CU_basic_run_suite
+                                  ffc01ed6        1a   func ,g         0
+  _CU_basic_run_test
+                                  ffc01ef0        25   func ,g         0
+  _CU_basic_set_mode
+                                  ffc01f15         9   func ,g         1
+  _CU_basic_get_mode
+                                  ffc01f1e         9   func ,g         0
+  _CU_basic_show_failures
+                                  ffc01f27        4f   func ,g         0
+  _basic_initialize
+                                  ffc01f76        94   func ,l         3
+  _basic_run_all_tests
+                                  ffc0200a        2f   func ,l         1
+  _basic_run_suite
+                                  ffc02039         d   func ,l         1
+  _basic_run_single_test
+                                  ffc02046         d   func ,l         1
+  _basic_test_start_message_handler
+                                  ffc02053       120   func ,l         1
+  _basic_test_complete_message_handler
+                                  ffc02173       15c   func ,l         1
+  _basic_all_tests_complete_message_handler
+                                  ffc022cf        2b   func ,l         1
+  _basic_suite_init_failure_message_handler
+                                  ffc022fa        86   func ,l         1
+  _basic_suite_cleanup_failure_message_handler
+                                  ffc02380        86   func ,l         1
+FILE=.\src\SampleGitJenkins.obj
+                                  ffc02406  ffc02456        51
+  _main
+                                  ffc02406        4f   func ,g         1
+  _abort
+                                  ffc02455         1   func ,g        41
+  _exit
+                                  ffc02456         1   func ,g         2
+FILE=.\src\lowsrc.obj
+                                  ffc02457  ffc025df       189
+  __INIT_IOLIB
+                                  ffc02457        84   func ,g         0
+  __CLOSEALL
+                                  ffc024db        2b   func ,g         0
+  _open
+                                  ffc02506        67   func ,g         1
+  _close
+                                  ffc0256d         3   func ,g         1
+  _write
+                                  ffc02570        37   func ,g         1
+  _read
+                                  ffc025a7        35   func ,g         0
+  _lseek
+                                  ffc025dc         4   func ,g         0
+FILE=.\src\sbrk.obj
+                                  ffc025e0  ffc02600        21
+  _sbrk
+                                  ffc025e0        21   func ,g         1
+FILE=.\src\source.obj
+                                  ffc02601  ffc02606         6
+  _add
+                                  ffc02601         3   func ,g         2
+  _subtract
+                                  ffc02604         3   func ,g         1
+FILE=.\src\testsource.obj
+                                  ffc02607  ffc02722       11c
+  _test_Add_01
+                                  ffc02607        30   func ,l         1
+  _test_Add_02
+                                  ffc02637        30   func ,l         1
+  _test_Subtract
+                                  ffc02667        30   func ,l         1
+  _AddTests
+                                  ffc02697        8c   func ,g         1
+FILE=.\src\Framework\CUError.obj
+                                  ffc02723  ffc027a4        82
+  _CU_set_error
+                                  ffc02723        43   func ,g        19
+  _CU_get_error
+                                  ffc02766         9   func ,g         2
+  _CU_get_error_msg
+                                  ffc0276f         a   func ,g         1
+  _CU_set_error_action
+                                  ffc02779         9   func ,g         1
+  _CU_get_error_action
+                                  ffc02782         9   func ,g         2
+  _get_error_desc
+                                  ffc0278b        1a   func ,l         2
+FILE=.\src\Framework\TestDB.obj
+                                  ffc027a5  ffc03477       cd3
+  _CU_initialize_registry
+                                  ffc027a5        61   func ,g         1
+  _CU_registry_initialized
+                                  ffc02806         e   func ,g         0
+  _CU_cleanup_registry
+                                  ffc02814        45   func ,g         2
+  _CU_get_registry
+                                  ffc02859         9   func ,g         4
+  _CU_set_registry
+                                  ffc02862        4b   func ,g         2
+  _CU_add_suite_with_setup_and_teardown
+                                  ffc028ad        94   func ,g         2
+  _CU_add_suite
+                                  ffc02941         d   func ,g         0
+  _CU_set_suite_active
+                                  ffc0294e        17   func ,g         0
+  _CU_set_suite_name
+                                  ffc02965        40   func ,g         0
+  _CU_set_suite_initfunc
+                                  ffc029a5        17   func ,g         0
+  _CU_set_suite_cleanupfunc
+                                  ffc029bc        17   func ,g         0
+  _CU_get_suite
+                                  ffc029d3        2e   func ,g         0
+  _CU_get_suite_at_pos
+                                  ffc02a01        24   func ,g         0
+  _CU_get_suite_pos
+                                  ffc02a25        43   func ,g         0
+  _CU_get_suite_pos_by_name
+                                  ffc02a68        56   func ,g         0
+  _CU_add_test
+                                  ffc02abe        a1   func ,g         1
+  _CU_set_test_active
+                                  ffc02b5f        17   func ,g         0
+  _CU_set_test_name
+                                  ffc02b76        40   func ,g         0
+  _CU_set_test_func
+                                  ffc02bb6        1b   func ,g         0
+  _CU_get_test
+                                  ffc02bd1        3e   func ,g         0
+  _CU_get_test_at_pos
+                                  ffc02c0f        34   func ,g         0
+  _CU_get_test_pos
+                                  ffc02c43        4d   func ,g         0
+  _CU_get_test_pos_by_name
+                                  ffc02c90        62   func ,g         0
+  _CU_register_nsuites
+                                  ffc02cf2        65   func ,g         1
+  _CU_register_suites
+                                  ffc02d57         d   func ,g         1
+  _cleanup_test_registry
+                                  ffc02d64        56   func ,l         1
+  _create_suite
+                                  ffc02dba        96   func ,l         1
+  _cleanup_suite
+                                  ffc02e50        5f   func ,l         1
+  _insert_suite
+                                  ffc02eaf        d2   func ,l         1
+  _create_test
+                                  ffc02f81        83   func ,l         1
+  _cleanup_test
+                                  ffc03004        42   func ,l         1
+  _insert_test
+                                  ffc03046       121   func ,l         1
+  _suite_exists
+                                  ffc03167        82   func ,l         1
+  _test_exists
+                                  ffc031e9        82   func ,l         1
+  _CU_create_new_registry
+                                  ffc0326b        14   func ,g         1
+  _CU_destroy_existing_registry
+                                  ffc0327f        47   func ,g         1
+  _CU_get_suite_by_name
+                                  ffc032c6        81   func ,g         1
+  _CU_get_suite_by_index
+                                  ffc03347        5a   func ,g         1
+  _CU_get_test_by_name
+                                  ffc033a1        81   func ,g         2
+  _CU_get_test_by_index
+                                  ffc03422        56   func ,g         1
+FILE=.\src\Framework\TestRun.obj
+                                  ffc03478  ffc0505b      1be4
+  _CU_assertImplementation
+                                  ffc03478        ba   func ,g         3
+  _CU_set_suite_start_handler
+                                  ffc03532         9   func ,g         0
+  _CU_set_test_start_handler
+                                  ffc0353b         9   func ,g         1
+  _CU_set_test_complete_handler
+                                  ffc03544         9   func ,g         1
+  _CU_set_suite_complete_handler
+                                  ffc0354d         9   func ,g         0
+  _CU_set_all_test_complete_handler
+                                  ffc03556         9   func ,g         1
+  _CU_set_suite_init_failure_handler
+                                  ffc0355f         9   func ,g         1
+  _CU_set_suite_cleanup_failure_handler
+                                  ffc03568         9   func ,g         1
+  _CU_get_suite_start_handler
+                                  ffc03571         9   func ,g         0
+  _CU_get_test_start_handler
+                                  ffc0357a         9   func ,g         0
+  _CU_get_test_complete_handler
+                                  ffc03583         9   func ,g         0
+  _CU_get_suite_complete_handler
+                                  ffc0358c         9   func ,g         0
+  _CU_get_all_test_complete_handler
+                                  ffc03595         9   func ,g         0
+  _CU_get_suite_init_failure_handler
+                                  ffc0359e         9   func ,g         0
+  _CU_get_suite_cleanup_failure_handler
+                                  ffc035a7         9   func ,g         0
+  _CU_get_number_of_suites_run
+                                  ffc035b0         9   func ,g         0
+  _CU_get_number_of_suites_failed
+                                  ffc035b9         9   func ,g         0
+  _CU_get_number_of_suites_inactive
+                                  ffc035c2         9   func ,g         0
+  _CU_get_number_of_tests_run
+                                  ffc035cb         9   func ,g         0
+  _CU_get_number_of_tests_failed
+                                  ffc035d4         9   func ,g         0
+  _CU_get_number_of_tests_inactive
+                                  ffc035dd         9   func ,g         0
+  _CU_get_number_of_asserts
+                                  ffc035e6         9   func ,g         0
+  _CU_get_number_of_successes
+                                  ffc035ef         d   func ,g         0
+  _CU_get_number_of_failures
+                                  ffc035fc         9   func ,g         0
+  _CU_get_number_of_failure_records
+                                  ffc03605         9   func ,g         0
+  _CU_get_elapsed_time
+                                  ffc0360e        2c   func ,g         1
+  _CU_get_failure_list
+                                  ffc0363a         9   func ,g         0
+  _CU_get_run_summary
+                                  ffc03643         7   func ,g         0
+  _CU_run_all_tests
+                                  ffc0364a        8b   func ,g         1
+  _CU_run_suite
+                                  ffc036d5        6a   func ,g         1
+  _CU_run_test
+                                  ffc0373f       1a4   func ,g         1
+  _CU_clear_previous_results
+                                  ffc038e3         f   func ,g         1
+  _CU_get_current_suite
+                                  ffc038f2         9   func ,g         0
+  _CU_get_current_test
+                                  ffc038fb         9   func ,g         0
+  _CU_is_test_running
+                                  ffc03904         9   func ,g         6
+  _CU_set_fail_on_inactive
+                                  ffc0390d         9   func ,g         0
+  _CU_get_fail_on_inactive
+                                  ffc03916         9   func ,g         0
+  _CU_print_run_results
+                                  ffc0391f        6c   func ,g         1
+  _CU_get_run_results_string
+                                  ffc0398b      1129   func ,g         1
+  _add_failure
+                                  ffc04ab4        eb   func ,l         9
+  _clear_previous_results
+                                  ffc04b9f        8b   func ,l         4
+  _cleanup_failure_list
+                                  ffc04c2a        2f   func ,l         1
+  _run_single_suite
+                                  ffc04c59       25f   func ,l         2
+  _run_single_test
+                                  ffc04eb8       1a4   func ,l         2
+FILE=.\src\Framework\Util.obj
+                                  ffc0505c  ffc0534c       2f1
+  _get_index
+                                  ffc0505c        21   func ,l         2
+  _CU_translate_special_characters
+                                  ffc0507d        cd   func ,g         0
+  _CU_translated_strlen
+                                  ffc0514a        6b   func ,g         0
+  _CU_compare_strings
+                                  ffc051b5        82   func ,g         4
+  _CU_trim
+                                  ffc05237         d   func ,g         0
+  _CU_trim_left
+                                  ffc05244        70   func ,g         1
+  _CU_trim_right
+                                  ffc052b4        6f   func ,g         1
+  _CU_number_width
+                                  ffc05323        2a   func ,g        92
+FILE=xtouptab
+                                  ffc0534d  ffc05362        16
+  __Getptoupper
+                                  ffc0534d        16   func ,g         0
+FILE=freopen
+                                  ffc05363  ffc05391        2f
+  _freopen
+                                  ffc05363        2f   func ,g         3
+FILE=fclose
+                                  ffc05392  ffc053e5        54
+  _fclose
+                                  ffc05392        54   func ,g         4
+FILE=setvbuf
+                                  ffc053e6  ffc05479        94
+  _setvbuf
+                                  ffc053e6        94   func ,g         2
+FILE=fprintf
+                                  ffc0547a  ffc054b4        3b
+  _prout
+                                  ffc0547a        1d   func ,l         1
+  _fprintf
+                                  ffc05497        1e   func ,g        50
+FILE=printf
+                                  ffc054b5  ffc054f3        3f
+  _prout
+                                  ffc054b5        1d   func ,l         1
+  _printf
+                                  ffc054d2        22   func ,g         7
+FILE=xctype
+                                  ffc054f4  ffc05509        16
+  __Getpctype
+                                  ffc054f4        16   func ,g         0
+FILE=__initsct
+                                  ffc0550a  ffc05553        4a
+  __INITSCT
+                                  ffc0550a         0   none ,g         1
+  loop1
+                                  ffc0551c         0   none ,l         1
+  next_loop1
+                                  ffc0552a         0   none ,l         2
+  loop3
+                                  ffc0553c         0   none ,l         1
+  next_loop3
+                                  ffc0554d         0   none ,l         2
+FILE=longjmp
+                                  ffc05554  ffc05585        32
+  _longjmp
+                                  ffc05554         0   none ,g         1
+FILE=setjmp
+                                  ffc05586  ffc055b0        2b
+  _setjmp
+                                  ffc05586         0   none ,g         1
+FILE=free
+                                  ffc055b1  ffc05633        83
+  _free
+                                  ffc055b1        83   func ,g        14
+FILE=malloc
+                                  ffc05634  ffc05711        de
+  _findmem
+                                  ffc05634        7b   func ,l         1
+  _malloc
+                                  ffc056af        63   func ,g         f
+FILE=fwrite
+                                  ffc05712  ffc057e4        d3
+  _fwrite
+                                  ffc05712        d3   func ,g         2
+FILE=fflush
+                                  ffc057e5  ffc05867        83
+  _fflush
+                                  ffc057e5        83   func ,g         5
+FILE=xfoprep
+                                  ffc05868  ffc0593f        d8
+  __Foprep
+                                  ffc05868        d8   func ,g         1
+FILE=xfofind
+                                  ffc05940  ffc059cd        8e
+  __Fofind
+                                  ffc05940        45   func ,g         0
+  __Fofree
+                                  ffc05985        49   func ,g         2
+FILE=xprintf
+                                  ffc059ce  ffc05c3c       26f
+  __Printf
+                                  ffc059ce       26f   func ,g         2
+FILE=xgetmem
+                                  ffc05c3d  ffc05c57        1b
+  __Getmem
+                                  ffc05c3d        1b   func ,g         1
+FILE=xfwprep
+                                  ffc05c58  ffc05cf0        99
+  __Fwprep
+                                  ffc05c58        99   func ,g         1
+FILE=xputfld
+                                  ffc05cf1  ffc06187       497
+  __Putfld
+                                  ffc05cf1       497   func ,g         1
+FILE=xfopen
+                                  ffc06188  ffc061b7        30
+  __Fopen
+                                  ffc06188        30   func ,g         1
+FILE=xvacopy
+                                  ffc061b8  ffc061bf         8
+  __Vacopy
+                                  ffc061b8         8   func ,g         2
+FILE=xputtxt
+                                  ffc061c0  ffc064a4       2e5
+  __Puttxt
+                                  ffc061c0       2e5   func ,g         3
+FILE=strchr
+                                  ffc064a5  ffc064ba        16
+  _strchr
+                                  ffc064a5        16   func ,g         2
+FILE=xldtob
+                                  ffc064bb  ffc068d9       41f
+  __Ldtob
+                                  ffc064bb       41f   func ,g         1
+FILE=xputstr
+                                  ffc068da  ffc069b9        e0
+  __Putstr
+                                  ffc068da        e0   func ,g         1
+FILE=xlitob
+                                  ffc069ba  ffc06ad3       11a
+  __Litob
+                                  ffc069ba       11a   func ,g         1
+FILE=xgenld
+                                  ffc06ad4  ffc06d7f       2ac
+  __Genld
+                                  ffc06ad4       2ac   func ,g         1
+FILE=xwctomb
+                                  ffc06d80  ffc06ed8       159
+  __Wctombx
+                                  ffc06d80       113   func ,g         1
+  __Wctomb
+                                  ffc06e93        46   func ,g         1
+FILE=xstate
+                                  ffc06ed9  ffc06f0a        32
+  __Getmbcurmax
+                                  ffc06ed9        16   func ,g         2
+  __Getpmbstate
+                                  ffc06eef        1c   func ,g         0
+FILE=xldscale
+                                  ffc06f0b  ffc06f0e         4
+  __LDscale
+                                  ffc06f0b         4   func ,g         1
+FILE=xldunsca
+                                  ffc06f0f  ffc06f12         4
+  __LDunscale
+                                  ffc06f0f         4   func ,g         1
+FILE=__COM_DIV64u
+                                  ffc06f13  ffc06fab        99
+  __COM_DIV64u
+                                  ffc06f13         0   none ,g         2
+  _Loop_Init
+                                  ffc06f1d         0   none ,l         2
+  _Loop
+                                  ffc06f25         0   none ,l         1
+  _DivStart
+                                  ffc06f31         0   none ,l         3
+  _Success
+                                  ffc06f3f         0   none ,l         1
+  _DivEnd
+                                  ffc06f4b         0   none ,l         0
+  IXI6DIV
+                                  ffc06f50         0   none ,l         1
+  IXI4DIV
+                                  ffc06f62         0   none ,l         1
+  IXI2DIV
+                                  ffc06f72         0   none ,l         1
+  I8I2DIV
+                                  ffc06f7a         0   none ,l         1
+  I4I2DIV
+                                  ffc06fa8         0   none ,l         1
+  _i8divU_End
+                                  ffc06fab         0   none ,l         0
+FILE=__COM_MOD64u
+                                  ffc06fac  ffc07032        87
+  __COM_MOD64u
+                                  ffc06fac         0   none ,g         1
+  _Loop_Init
+                                  ffc06fb6         0   none ,l         2
+  _Loop
+                                  ffc06fba         0   none ,l         1
+  _DivStart
+                                  ffc06fc6         0   none ,l         3
+  _Success
+                                  ffc06fd4         0   none ,l         1
+  _DivEnd
+                                  ffc06fdc         0   none ,l         0
+  IXI6DIV
+                                  ffc06fdd         0   none ,l         1
+  IXI4DIV
+                                  ffc06fef         0   none ,l         1
+  IXI2DIV
+                                  ffc06fff         0   none ,l         1
+  I8I2DIV
+                                  ffc07007         0   none ,l         1
+  I4I2DIV
+                                  ffc07027         0   none ,l         1
+FILE=_div
+                                  ffc07033  ffc0703e         c
+  _ldiv
+                                  ffc07033         0   none ,g         1
+  _div
+                                  ffc07033         0   none ,g         1
+FILE=localeco
+                                  ffc0703f  ffc07045         7
+  _localeconv
+                                  ffc0703f         7   func ,g         1
+FILE=xwcstate
+                                  ffc07046  ffc07061        1c
+  __Getpwcstate
+                                  ffc07046        1c   func ,g         0
+FILE=xfdscale
+                                  ffc07062  ffc07182       121
+  __FDscale
+                                  ffc07062       121   func ,g         1
+FILE=xfdunsca
+                                  ffc07183  ffc071dd        5b
+  __FDunscale
+                                  ffc07183        5b   func ,g         1
+FILE=xfdnorm
+                                  ffc071de  ffc0725c        7f
+  __FDnorm
+                                  ffc071de        7f   func ,g         2
+
+SECTION=EXCEPTVECT
+FILE=.\src\vector_table.obj
+                                  ffffff80  fffffffb        7c
+  _Except_Vectors
+                                  ffffff80        7c   data ,g         0
+
+SECTION=RESETVECT
+FILE=.\src\vector_table.obj
+                                  fffffffc  ffffffff         4
+  _Reset_Vectors
+                                  fffffffc         4   data ,g         0
+
+Absolute value symbols
+FILE=.\src\lowlvl.obj
+  SIM_IO
+                                  00000000         0   none ,l         0
+
+*** Unfilled Areas ***
+
+AREA                                START    END
+
+*** Delete Symbols ***
+
+SYMBOL                                SIZE    INFO
