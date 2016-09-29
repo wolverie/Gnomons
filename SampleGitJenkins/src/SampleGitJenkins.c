@@ -16,6 +16,7 @@ int main(void)
     //Define error action
     //Runs should be continued when an error condition occurs (if possible)
     CU_ErrorAction error_action = CUEA_IGNORE;
+    
     //Initializes the framework test registry
     if (CU_initialize_registry()) {
         printf("\nInitialization of Test Registry failed.");
@@ -32,6 +33,7 @@ int main(void)
         //and release memory used by the framework
         CU_cleanup_registry();
     }
+    
     return 0;
 }
 void abort(void){}
