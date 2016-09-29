@@ -36,6 +36,7 @@ int main(void)
     
     return 0;
 }
+
 void abort(void){}
 
 void exit(long exitcode){}
