@@ -2,10 +2,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Basic.h"
+
 void exit(long);
 void abort(void);
 int main(void);
 extern AddTests();
+
 int main(void)
 {
 //Define the run mode for the basic interface.
